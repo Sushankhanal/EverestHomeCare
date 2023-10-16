@@ -662,6 +662,20 @@ section {
   background: #1977cc;
   border-radius: 4px;
   color: #fff;
+  border-radius: 20px;
+}
+.row h1{
+  padding-bottom: 20px;
+  justify-content: center;
+}
+
+.zoom:hover {
+  border-radius: 15px 20px;
+  box-shadow: 3px;
+  box-shadow: -1px -1px 15px black;
+  padding: 10px;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .why-us .content h3 {
@@ -789,7 +803,9 @@ section {
 .about .video-box {
   background: url("../img/about.jpg") center center no-repeat;
   background-size: cover;
-  min-height: 500px;
+  /* min-height: 500px; */
+  margin-left: 44px;
+  border-radius: 42px;
 }
 
 .about .play-btn {
