@@ -659,9 +659,9 @@ section {
 --------------------------------------------------------------*/
 .why-us .content {
   padding: 30px;
-  background: #1977cc;
+  /* background: #1977cc; */
   border-radius: 4px;
-  color: #fff;
+  color: black;
   border-radius: 20px;
 }
 .row h1{
@@ -731,6 +731,7 @@ section {
   font-size: 15px;
   color: #848484;
 }
+
 
 /*--------------------------------------------------------------
 # About
@@ -1766,4 +1767,23 @@ section {
   background: #1c84e3;
   color: #fff;
   text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# mission and vision
+--------------------------------------------------------------*/
+
+.card-text {
+  color: #1977cc;
+  background-size: 100%; /* This ensures the image covers the entire element */
+  background-position: center; /* Center the image within the element */
+}
+.card-title{
+  color: #1977cc;
+}
+.card img {
+  max-width: 10%; /* Set a maximum width for the image */
+  height: auto; /* Allow the height to adjust proportionally */
+  display: block; /* Ensure the image is treated as a block element */
+  margin: 0 auto; /* Center the image within its container */
 }
