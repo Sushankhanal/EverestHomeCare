@@ -701,6 +701,11 @@ section {
   font-size: 14px;
 }
 
+.mission-vision-value {
+  margin-top: -65px !important;
+  padding-bottom: 11px;
+}
+
 .why-us .content .more-btn:hover {
   color: #1977cc;
   background: #fff;
@@ -1780,6 +1785,7 @@ section {
 }
 .card-title{
   color: #1977cc;
+  margin-left: 32px;
 }
 .card img {
   max-width: 10%; /* Set a maximum width for the image */
