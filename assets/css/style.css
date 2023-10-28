@@ -15,7 +15,7 @@
 }
 body {
   font-family: "Open Sans", sans-serif;
-  color:white;
+  color:rgba(157, 172, 182, 0.281);
 }
 
 a {
@@ -169,7 +169,7 @@ h6 {
 #header {
   display: flex;
   align-items: center;
-  background-color: rgba(12, 11, 12, 0.753); 
+  background-color:rgba(28, 47, 65, 0.9);
   max-height: 100px;
   transition: all 0.5s;
   z-index: 997;
@@ -545,7 +545,7 @@ h6 {
     }
   }
   
-
+ 
 /* #hero h1 {
   margin: 0;
   font-size: 48px;
