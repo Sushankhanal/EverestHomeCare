@@ -170,7 +170,7 @@ h6 {
   display: flex;
   align-items: center;
   background-color: rgba(12, 11, 12, 0.753); 
-  height: 100px;
+  max-height: 100px;
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
@@ -181,9 +181,12 @@ h6 {
 #header.header-scrolled {
   top: 0;
 }
-
+.me-auto{
+  max-height: 90px;
+  background-color: white;
+}
 #header .logo {
-  font-size: 60px;
+  /* font-size: 60px; */
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -197,7 +200,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 120px;
+  max-height: 100px;
   max-width: 100px;
 }
 
@@ -470,25 +473,87 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
-  height: 110vh;
-  background: url("../img/hero2.jpg") top center;
-  background-size: cover;
+  max-width: 100%;
+  height: 90vh;
+  display: flex;
   margin-bottom: -200px;
 }
 
-#hero .container {
-  position: relative;
+.color-half {
+  flex: 1;
+  background-color: rgba(157, 172, 182, 0.281); 
+  box-sizing: border-box; /* Include padding in element's total width/height */
+  height: 100%; /* Make sure the color takes up 100% of the height */
+  padding: 100px; 
+  display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
-#hero h1 {
+#hero .image-half {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  animation: changeImage 7s infinite;
+}
+
+@keyframes changeImage {
+  0%, 100% {
+    background-image: url("../img/hero2.jpg");
+  }
+  50% {
+    background-image: url("../img/caring1.jpg");
+  }
+}
+
+
+  /* 66.67% {
+    background-image: url("../img/liveincare.jpg");
+  }
+  100% {
+    background-image: url("../img/hero-bg.jpg");
+  } */
+
+
+
+  #hero h2 {
+    color: darkgreen;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 5s steps(30, end) infinite, pause 10s 1 forwards;
+  }
+  
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes pause {
+    0% {
+      border-right-color: transparent;
+    }
+    100% {
+      border-right-color: orange;
+    }
+  }
+  
+
+/* #hero h1 {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
   color: #2c4964;
-}
+} */
 
 #hero h2 {
   color: #2c4964;
@@ -528,7 +593,8 @@ h6 {
   }
 
   #hero .container {
-    padding-bottom: 63px;
+    padding-bottom: 20px;
+align-items: center;
   }
 
   #hero h1 {
@@ -666,12 +732,14 @@ section {
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
+
 .why-us .content {
   padding: 30px;
   /* background: #1977cc; */
   border-radius: 4px;
   color: black;
   border-radius: 20px;
+   /* Add this line to create space at the top */
 }
 .why-us-color{
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
@@ -740,7 +808,7 @@ background-color:#082744
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
-  padding: 40px 30px;
+ /* padding: 40px 30px;  */
   width: 100%;
   transition: transform 0.7s;
 }
@@ -776,7 +844,10 @@ background-color:#082744
   color: #4b7dab;
   margin-bottom: 15px;
 }
-
+.icon-boxes{
+  max-width: 800px;
+  margin-left: 50px;
+}
 .about .icon-boxes h3 {
   font-size: 35px;
   font-weight: 700;
@@ -788,6 +859,10 @@ background-color:#082744
 .about .icon-box {
   margin-top: 20px;
 }
+.about .icon-boxes p {
+  margin-left: 0px;
+  margin-right: 3px;
+}
 .strategy{
   margin-top: 6px;
 }
@@ -797,7 +872,8 @@ background-color:#082744
   border: 2px solid transparent;
   margin-bottom: 13px;
   margin-top: 30px;
-  height: 130px;
+  max-width: 100%;
+  max-height: 150px;
 }
 .about-card:hover{
 scale:1.05;
@@ -812,8 +888,8 @@ cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
+  max-width: 64px;
+ max-height: 64px;
   border: 2px solid #8dc2f1;
   border-radius: 50px;
   transition: 0.5s;
@@ -827,7 +903,7 @@ cursor: pointer;
 }
 
 .about .icon-box:hover .icon {
-  background: #1977cc;
+  background: #0c76d3;
   border-color: #1977cc;
 }
 
@@ -855,9 +931,10 @@ cursor: pointer;
 
 .about .video-box {
   margin-top: 130px;
-  height: 650px;
-  width: 400px;
-  background: url("../img/about.jpg") center center no-repeat;
+  margin-left: 100px;
+  max-height: 650px;
+  max-width: 400px;
+  background: url("../img/image8.jpg") center center no-repeat;
   background-size: cover;
   /* min-height: 500px; */
   border-radius: 30px;
@@ -1361,8 +1438,11 @@ top: 10px;
 --------------------------------------------------------------*/
 .contact .info {
   margin-top: 30px;
-  width: 100%;
+  max-width: 100%;
   background: #fff;
+}
+#contact .mt-5{
+  height: 100%;
 }
 
 .contact .info i {
@@ -1475,6 +1555,7 @@ top: 10px;
 .contact .php-email-form button[type=submit] {
   background: #1977cc;
   border: 0;
+  margin-bottom: 50px;
   padding: 10px 35px;
   color: #fff;
   transition: 0.4s;
@@ -1496,6 +1577,7 @@ top: 10px;
 }
 .row1{
   height:600px;
+  justify-content: space-between;
   display: flex;
 }
 .map1{
@@ -1519,12 +1601,12 @@ margin-right: 20px;
 .m1{
   border-radius: 10px;
   height: 495px;
-  width: 595px;
+ width: 590px;
 }
 .m2{
   border-radius: 10px;
   height: 495px;
-  width: 580px;
+  width: 590px;
 }
 .locate{
   border-right:1px solid rgba(189, 189, 189, 0.726);
@@ -1540,7 +1622,7 @@ margin-right: 20px;
   box-shadow:5px 5px 15px rgba(109, 107, 107, 0.24);
   display:flex;
   justify-content: space-between;
-  height: 400px;
+ height: 400px;
 }
 
 /*--------------------------------------------------------------
@@ -1730,7 +1812,7 @@ margin-right: 20px;
   padding-top:40px;
 }
 .title{
-  color: #166ab5;
+  color: #2083e6;
 }
 .txt{
   padding-left: 20px;
@@ -1745,65 +1827,80 @@ display:flex;
 flex-direction: column;
 align-items: center;
 }
-.services{
-  height:1250px;
-}
+/* .services{
+  height:1000px;
+} */
 .all-img1{
   margin-top: 30px;
+  margin-left: 60px;
 justify-content: space-between;
   display: flex;
-  height: 400px;
-  width: 1000px;
-  margin-left:120px;
-  margin-top:50px;
+  max-height: 400px;
+  max-width: 1000px;
+  gap: 20px;
+  /* margin-top:50px; */
 }
 .serv-img{
   transition:scale 0.7s;
   box-shadow:5px 5px 10px rgba(161, 159, 159, 0.473) ;
   background-color: rgba(157, 172, 182, 0.281);
-  height:400px ;
-width:400px;
+  max-height:400px ;
+max-width:400px;
+}
+.serv-img h4{
+  padding-left: 100px;
+}
+.serv-img p{
+  color:black; 
+   padding-left: 10px;
 }
 .serv-img:hover{
   cursor: pointer;
 scale: 1.04;
 }
+.serv{
+  max-height: 300px;
+  width:400px ;
+}
 .all-img2{
   margin-top: 30px;
+  margin-left: 60px;
 justify-content: space-between;
   display: flex;
-  height: 400px;
-  width: 1000px;
-  margin-left:120px;
-  margin-top:50px;
+  max-height: 400px;
+  max-width: 1000px;
+  gap: 20px;
+  /* margin-top:50px; */
 }
+
+
+/* whole container  */
 .whole-container{
   display: flex;
   justify-content: space-between;
-  height: 600px;
+  max-height: 800px;
+  margin-left: 90px;
 }
 .whole-card1{
   transition: scale 0.5s;
   box-shadow:5px 5px 10px rgba(161, 159, 159, 0.473) ;
   color: rgb(0, 0, 0);
  background-color: rgba(157, 172, 182, 0.281);
-  margin-left: 100px;
-  margin-top:60px;
-  height: 400px;
-  width: 550px;
+  max-height: 400px;
+  max-width: 550px;
+  margin-right: 90px;
 }
 .whole-card1:hover{
   cursor: pointer;
 scale: 1.04;
 }
 .whole-card2{
+  gap: 10px;
   box-shadow:5px 5px 10px rgba(161, 159, 159, 0.473) ;
   color: black;
  background-color:rgba(157, 172, 182, 0.281);
-  margin-right: 100px;
-  margin-top:60px;
-  height: 400px;
-  width: 550px;
+  max-height: 400px;
+  max-width: 550px;
   transition: scale 0.5s;
 }
 .whole-card2:hover{
@@ -1813,16 +1910,10 @@ scale: 1.04;
 .crd1, .crd2{
   padding:15px;
 }
-/* .carousel-inner{
-  height: 500px;
-  width: 500px;
-}
-.carousel{
-  margin-top: 50px;
-  margin-left: 440px;
-  height: 600px;
-  width: 500px;
-} */
+
+
+
+/* gallery  */
 .gallery-g{
  height:450px;
   display: grid;
