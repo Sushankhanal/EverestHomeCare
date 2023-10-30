@@ -1912,9 +1912,9 @@ scale: 1.04;
     max-width: 400px;
     transition: scale 0.5s;
   }
-/* .crd1, .crd2{
-  padding-right:15px;
-} */
+.crd1, .crd2{
+  padding:15px;
+}
 
 
 
