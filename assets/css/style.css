@@ -1895,22 +1895,34 @@ justify-content: space-between;
   cursor: pointer;
 scale: 1.04;
 }
-.whole-card2{
-  gap: 10px;
-  box-shadow:5px 5px 10px rgba(161, 159, 159, 0.473) ;
-  color: black;
- background-color:rgba(157, 172, 182, 0.281);
-  max-height: 400px;
-  max-width: 550px;
+.whole-card1{
   transition: scale 0.5s;
+  box-shadow:5px 5px 10px rgba(161, 159, 159, 0.473) ;
+  color: rgb(0, 0, 0);
+ background-color:rgba(7, 248, 148, 0.849);
+  /* margin-left: 140px; */
+  margin-top:60px;
+  max-height: 500px;
+  max-width: 400px;
 }
 .whole-card2:hover{
   cursor: pointer;
   scale: 1.04;
   }
-.crd1, .crd2{
-  padding:15px;
-}
+  .whole-card2{
+    gap: 10px;
+    box-shadow:5px 5px 10px rgba(161, 159, 159, 0.473) ;
+    color: black;
+   background-color:rgba(7, 248, 148, 0.849);
+    /* margin-right: 140px; */
+    margin-top:60px;
+    max-height: 500px;
+    max-width: 400px;
+    transition: scale 0.5s;
+  }
+/* .crd1, .crd2{
+  padding-right:15px;
+} */
 
 
 
