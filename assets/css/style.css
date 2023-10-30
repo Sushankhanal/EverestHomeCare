@@ -1876,11 +1876,11 @@ justify-content: space-between;
 
 
 /* whole container  */
-.whole-container{
+.whole-container{  
   display: flex;
   justify-content: space-around;
-  max-height: 800px;
-  margin-left: 90px;
+  max-height: 900px;
+  width: 100%;
 }
 .whole-card1{
   transition: scale 0.5s;
