@@ -212,6 +212,10 @@
         font-size: 30px;
        
       }
+
+      .crd2{
+        margin-top: 0px;
+      }
 }
 @media (max-width:768px){ 
   #header{
@@ -464,9 +468,9 @@ margin-top: 20px;
       .contact .php-email-form {
         max-height: 500px;
       }
-      #contact .row{
+      /* #contact .row{
         margin-left: 20px;
-      }
+      } */
       .section-title h2 {
         font-size: 30px;
       }
@@ -806,9 +810,9 @@ margin-top: 20px;
       .contact .php-email-form {
         max-height: 500px;
       }
-      #contact .row{
+      /* #contact .row{
         margin-left: 30px;
-      }
+      } */
       #contact .forms .row{
     margin: 0px;
     padding: 0px;

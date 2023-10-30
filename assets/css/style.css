@@ -27,7 +27,9 @@ a:hover {
   color: #3291e6;
   text-decoration: none;
 }
-
+.whole-card1 h2, .whole-card2 h2{
+  color:crimson;
+}
 h1,
 h2,
 h3,
@@ -35,7 +37,7 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
-  color: #166ab5;
+  color: crimson;
 }
 
 /*--------------------------------------------------------------
@@ -639,7 +641,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #2c4964;
+  color: crimson;
 }
 
 .section-title h2::before {
@@ -837,12 +839,20 @@ background-color:#082744
 }
 
 
+
+/* about and mission bg-image */
+#bg-1{
+background-image: url("../img/bg-1.jpg");
+background-size: cover;
+background-position: center;
+}
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
 .about .icon-boxes h4 {
   font-size: 18px;
-  color: #4b7dab;
+  color: #0e7fe9;
   margin-bottom: 15px;
 }
 .icon-boxes{
@@ -852,7 +862,7 @@ background-color:#082744
 .about .icon-boxes h3 {
   font-size: 35px;
   font-weight: 700;
-  color: #2c4964;
+  color: #09d9fd;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -868,6 +878,7 @@ background-color:#082744
   margin-top: 6px;
 }
 .about-card{
+  background-color: rgba(255, 255, 255, 0.623);
   transition: scale 0.5s;
   box-shadow:5px 5px 10px rgba(161, 159, 159, 0.473) ;
   border: 2px solid transparent;
@@ -1437,6 +1448,7 @@ top: 10px;
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
 .contact .info {
   margin-top: 30px;
   max-width: 100%;
@@ -1813,7 +1825,7 @@ margin-right: 20px;
   padding-top:40px;
 }
 .title{
-  color: #2083e6;
+  color: #3e17ca;
 }
 .txt{
   padding-left: 20px;
@@ -1828,9 +1840,23 @@ display:flex;
 flex-direction: column;
 align-items: center;
 }
-/* .services{
-  height:1000px;
-} */
+#services {
+  position: relative;
+}
+
+#services::before {
+  content: "";
+  background-image: url("../img/bg-2.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Ensure the background stays behind the content */
+}
 .all-img1{
   margin-top: 30px;
   margin-left: 60px;
@@ -1844,7 +1870,7 @@ justify-content: space-between;
 .serv-img{
   transition:scale 0.7s;
   box-shadow:5px 5px 10px rgba(161, 159, 159, 0.473) ;
-  background-color: rgba(157, 172, 182, 0.281);
+  background-color: rgba(247, 251, 253, 0.815);
   max-height:400px ;
 max-width:400px;
 }
@@ -1852,7 +1878,7 @@ max-width:400px;
   padding-left: 100px;
 }
 .serv-img p{
-  color:black; 
+ color: black;
    padding-left: 10px;
 }
 .serv-img:hover{
@@ -1876,22 +1902,38 @@ justify-content: space-between;
 
 
 /* whole container  */
-.whole-container{  
-  display: flex;
-  justify-content: space-around;
-  max-height: 900px;
-  width: 100%;
+#whole{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  
 }
+.whole-container{ 
+  background-image: url("../img/bg-3.jpg");
+  background-size: cover;
+  background-position: center;
+  /* opacity: 0.65; */
+   display: flex;
+   justify-content: space-around;
+   height: 800px;
+   width: 100%;
+ }
+
+/* Rest of your CSS for .whole-container */
+
+
+
 .whole-card1{
   transition: scale 0.5s;
-  box-shadow:5px 5px 10px rgba(161, 159, 159, 0.473) ;
-  color: rgb(0, 0, 0);
- background-color:rgba(7, 248, 148, 0.849);
+  /* box-shadow:5px 5px 10px rgba(161, 159, 159, 0.473) ; */
+  color: floralwhite;
+ /* background-color:rgba(4, 252, 149, 0.829); */
   /* margin-left: 140px; */
   margin-top:60px;
   max-height: 500px;
   max-width: 400px;
+  opacity: 1;
 }
+
 .whole-card1:hover{
   cursor: pointer;
 scale: 1.04;
@@ -1903,17 +1945,22 @@ scale: 1.04;
   }
   .whole-card2{
     gap: 10px;
-    box-shadow:5px 5px 10px rgba(161, 159, 159, 0.473) ;
-    color: black;
-   background-color:rgba(7, 248, 148, 0.849);
+    /* box-shadow:5px 5px 10px rgba(161, 159, 159, 0.473) ; */
+    color: floralwhite;
+    /* background-color:rgba(4, 252, 149, 0.829); */
     /* margin-right: 140px; */
     margin-top:60px;
     max-height: 500px;
     max-width: 400px;
     transition: scale 0.5s;
+    opacity: 1;
   }
 .crd1, .crd2{
   padding:15px;
+  opacity: 1;
+}
+.crd2{
+  margin-top: 400px;
 }
 
 
@@ -1925,7 +1972,7 @@ scale: 1.04;
 /* place-items: center; */
 }
 .slider{
-  height: 350px;
+  /* height: 350px; */
   position: relative;
   width: 100%;
  display: grid; 
