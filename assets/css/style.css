@@ -1878,7 +1878,7 @@ justify-content: space-between;
 /* whole container  */
 .whole-container{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   max-height: 800px;
   margin-left: 90px;
 }
